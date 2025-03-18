@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo Tengo Muy Duro - Búsqueda de Productos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #a80030, #a1a1a1);
+            text-align: center;
+            display: flex;
+            height: 100vh;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .barra_lateral {
+            width: 300px;
+            height: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction:column;
+        }
+        .productos {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .tarjeta_de_producto {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function ActualizarBarraPrecios(value) {
+            document.getElementById('rangeValue').textContent = value + '€';
+        }
+    </script>
+</head>
+<body>
+    <header style="position: absolute; right: 0%">
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="productos.html">PRODUCTOS</a>
+            <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
+        </nav>
+    </header>
+    <div class="barra_lateral">
+        <h2>Búsqueda de filtros</h2>
+        <label for="search">Buscar</label>
+        <input type="text" id="search" placeholder="Buscar...">
+        <h3>Precio</h3>
+        <input type="range" min="1" max="2500" value="1" oninput="ActualizarBarraPrecios(this.value)">
+        <span id="rangeValue">1€</span>
+        <h3>Marcas</h3>
+        <input type="checkbox"> Wentern Digital (16)<br>
+        <input type="checkbox"> Kingston (1)<br>
+        <input type="checkbox"> Samsung (1)<br>
+        <input type="checkbox"> Fujitsu (5)<br>
+        <button>Ver más</button>
+    </div>
+    <div class="productos" style="margin-top: 40px">
+        <div class="tarjeta_de_producto">
+            <img src="Imagenes/productos/Kingston_NV3 _1TB_Disco_SSD.png" alt="SSD">
+            <h4>Kingston NV3 1TB Disco SSD</h4>
+            <p>54,99€</p>
+            <p>4.7/5 ⭐ 177 opiniones</p>
+        </div>
+        <div class="tarjeta_de_producto">
+            <img src="Imagenes/productos/Kingston_A400_960Gb_Disco_SSD.jpg" alt="SSD">
+            <h4>Kingston A400 960Gb Disco SSD</h4>
+            <p>54,99€</p>
+            <p>4.7/5 ⭐ 25207 opiniones</p>
+        </div>
+        <div class="tarjeta_de_producto">
+            <img src="Imagenes/productos/Samsung_870_QVO_SSD_2TB.jpg" alt="SSD">
+            <h4>Samsung 870 QVO SSD 2TB</h4>
+            <p>166,99€</p>
+            <p>4.7/5 ⭐ 402 opiniones</p>
+        </div>
+        <div class="tarjeta_de_producto">
+            <img src="Imagenes/productos/WD_Red_Plus_NAS_8TB_Disco_Interno_HDD_3.5.jpg" alt="SSD">
+            <h4>WD Red Plus NAS 8TB Disco Interno HDD 3.5"</h4>
+            <p>213,99€</p>
+            <p>4.6/5 ⭐ 763 opiniones</p>
+        </div>
+        <div class="tarjeta_de_producto">
+            <img src="Imagenes/productos/WD_Red_SA500_SSD_2.5_2TB.jpg" alt="SSD">
+            <h4>WD Red SA500 SSD 2.5" 2TB</h4>
+            <p>162,54€</p>
+            <p>4.8/5 ⭐ 2 opiniones</p>
+        </div>
+        <div class="tarjeta_de_producto">
+            <img src="Imagenes/productos/Fujitsu_S26361-f5776-l960-2_2.5_960GB_SSD.jpg" alt="SSD">
+            <h4>Fujitsu S26361-f5776-l960-2 2.5" 960GB SSD</h4>
+            <p>2409,00€</p>
+            <p>4.8/5 ⭐ 2 opiniones</p>
+        </div>
+    </div>
+</body>
+</html>
