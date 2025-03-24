@@ -6,9 +6,9 @@
     <title>Lo Tengo Muy Duro - Página 3</title>
     <style>
         body {
-            margin: 0px;
+            margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(90deg, #c0f0c0, #90c0f0);
+            background: linear-gradient(90deg, #a80030, #a1a1a1);
             text-align: center;
         }
         header {
@@ -22,28 +22,49 @@
             color: black;
             font-weight: bold;
         }
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: left;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        h1 {
+            margin: 50px 0 20px;
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            background: #a1a1a1;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #8d8d8d;
+            transform: scale(1.2);
+            transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        img {
+            max-width: 300px;
+        }
+        img:hover{
+            transform: scale(1.2);
+            transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
         }
     </style>
 </head>
 <body>
     <header>
-        <b>
-            <div>Lo Tengo Muy Duro</div>
-        </b>
+        <div>Lo Tengo Muy Duro</div>
         <nav>
             <a href="index.html">INICIO</a>
             <a href="productos.html">PRODUCTOS</a>
             <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
         </nav>
     </header>
+</head>
+<body>
     <div class="content">
         <h2>Contacta con nosotros</h2>
         <p>Calle Pene 1, Sevilla, España</p>

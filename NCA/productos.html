@@ -10,8 +10,6 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(90deg, #a80030, #a1a1a1);
             text-align: center;
-            display: flex;
-            height: 100vh;
         }
         header {
             display: flex;
@@ -24,63 +22,40 @@
             color: black;
             font-weight: bold;
         }
-        .barra_lateral {
-            width: 300px;
-            height: auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction:column;
-        }
         .productos {
-            flex: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
+            justify-content: center;
             padding: 20px;
         }
         .tarjeta_de_producto {
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .tarjeta_de_producto:hover {
+            transform: scale(1.1);
         }
         img {
             max-width: 100%;
-            border-radius: 10px;
+            height: auto;
         }
     </style>
-    <script>
-        function ActualizarBarraPrecios(value) {
-            document.getElementById('rangeValue').textContent = value + '€';
-        }
-    </script>
 </head>
 <body>
-    <header style="position: absolute; right: 0%">
+    <header>
+        <div>Lo Tengo Muy Duro</div>
         <nav>
             <a href="index.html">INICIO</a>
             <a href="productos.html">PRODUCTOS</a>
             <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
         </nav>
     </header>
-    <div class="barra_lateral">
-        <h2>Búsqueda de filtros</h2>
-        <label for="search">Buscar</label>
-        <input type="text" id="search" placeholder="Buscar...">
-        <h3>Precio</h3>
-        <input type="range" min="1" max="2500" value="1" oninput="ActualizarBarraPrecios(this.value)">
-        <span id="rangeValue">1€</span>
-        <h3>Marcas</h3>
-        <input type="checkbox"> Wentern Digital (16)<br>
-        <input type="checkbox"> Kingston (1)<br>
-        <input type="checkbox"> Samsung (1)<br>
-        <input type="checkbox"> Fujitsu (5)<br>
-        <button>Ver más</button>
-    </div>
-    <div class="productos" style="margin-top: 40px">
+    <div class="productos">
         <div class="tarjeta_de_producto">
             <img src="Imagenes/productos/Kingston_NV3 _1TB_Disco_SSD.png" alt="SSD">
             <h4>Kingston NV3 1TB Disco SSD</h4>
