@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="icon" type="image/x-icon" href="Imagenes/Favicon/favicon.png">
+    <style> 
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #a80030, #a1a1a1);
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        h1 {
+            margin: 50px 0 20px;
+        }
+        .buttons button {
+            margin: 10px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            background: #a1a1a1;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #8d8d8d;
+            transform: scale(1.2);
+            transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        img {
+            width: 30%;
+        }
+        img:hover{
+            transform: scale(1.2);
+            transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+        }
+        table {
+            width: 80%;
+            margin: 40px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #a80030;
+            color: white;
+        }
+        .contenidos { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            display: inline-block; 
+            text-align: left; 
+        }
+        h2 { 
+            text-align: center; 
+        }
+        h3 { 
+            text-align: left; 
+        }
+        h4 { 
+            text-align: left; 
+        }
+        ul { 
+            margin-bottom: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>Lo Tengo Muy Duro</div>
+        <nav>
+            <a href="index.html">INICIO</a>
+            <a href="productos.html">PRODUCTOS</a>
+            <a href="sobrenosotros.html">SOBRE NOSOTROS</a>
+        </nav>
+    </header> 
+    <h2>Partes de un disco duro de servidor</h2>
+    <div class="image-container">
+        <img src="Imagenes/info/Sin título.jpg" alt="Partes de un disco duro de servidor">
+    </div>
+
+    <div class="contenidos">
+    <h2>Partes de un disco duro de servidor y su función</h2>
+
+    <ul>
+        <li><strong>Actuador:</strong> Es el mecanismo encargado de mover los cabezales de lectura/escritura sobre los discos. Funciona con un electroimán y permite un posicionamiento preciso para acceder rápidamente a los datos.</li>
+        
+        <li><strong>Eje de los discos:</strong> Es el componente sobre el cual giran los platos del disco duro. Está conectado a un motor que permite que estos giren a altas velocidades (hasta 15,000 RPM en servidores).</li>
+        
+        <li><strong>Discos/Platos:</strong> Son los discos circulares recubiertos con una capa magnética donde se almacenan los datos. Pueden ser de aluminio, vidrio o cerámica y giran a alta velocidad para permitir un acceso rápido a la información.</li>
+        
+        <li><strong>Cabezal magnético:</strong> Es un componente diminuto que se encuentra suspendido sobre la superficie de los platos. Su función es leer y escribir datos mediante cambios en el campo magnético del disco. Nunca toca el plato, ya que eso podría dañarlo.</li>
+        
+        <li><strong>Brazos del actuador:</strong> Son los soportes donde van montados los cabezales magnéticos. Se mueven con precisión sobre los discos para posicionar los cabezales en la pista correcta.</li>
+        
+        <li><strong>Eje de los brazos:</strong> Es el punto de pivote sobre el cual giran los brazos del actuador. Permite que los cabezales se desplacen con precisión sobre los discos para acceder a diferentes sectores de datos.</li>
+        
+        <li><strong>Chasis:</strong> Es la carcasa externa del disco duro que protege los componentes internos contra golpes, polvo y otros factores ambientales. También ayuda a disipar el calor generado durante el funcionamiento.</li>
+        
+        <li><strong>Jumpers:</strong> Son pequeños puentes eléctricos que permiten configurar manualmente ciertas opciones del disco duro, como el modo de funcionamiento o la prioridad de arranque en modelos más antiguos.</li>
+        
+        <li><strong>Conector SATA:</strong> Es la interfaz que permite la comunicación del disco duro con la placa base del servidor. SATA es uno de los estándares más utilizados, ofreciendo buena velocidad y confiabilidad.</li>
+        
+        <li><strong>Conector de alimentación:</strong> Es el puerto a través del cual el disco duro recibe la energía necesaria para su funcionamiento. En servidores, suelen estar diseñados para soportar fuentes de alimentación redundantes, evitando apagones inesperados.</li>
+    </ul>
+</div>
+
+    <h2>Diferencias entre discos duros de servidores y discos duros normales</h2>
+    <table>
+        <tr>
+            <th>Característica</th>
+            <th>Discos de servidores</th>
+            <th>Discos duros normales</th>
+        </tr>
+        <tr>
+            <td>Durabilidad</td>
+            <td>Diseñados para funcionar 24/7 sin fallos</td>
+            <td>Para uso diario, no continuo</td>
+        </tr>
+        <tr>
+            <td>Velocidad</td>
+            <td>Más rápidos (HDD: hasta 15,000 RPM)</td>
+            <td>Menos rápidos (HDD: 5400 o 7200 RPM)</td>
+        </tr>
+        <tr>
+            <td>Capacidad</td>
+            <td>Hasta 20 TB o más</td>
+            <td>Generalmente hasta 4 TB</td>
+        </tr>
+        <tr>
+            <td>Confiabilidad</td>
+            <td>Mayor resistencia a fallos y vibraciones</td>
+            <td>Menos robustos</td>
+        </tr>
+        <tr>
+            <td>Costo</td>
+            <td>Más caros</td>
+            <td>Más económicos</td>
+        </tr>
+        <tr>
+            <td>Uso recomendado</td>
+            <td>Servidores y centros de datos</td>
+            <td>Computadoras personales y laptops</td>
+        </tr>
+    </table>
+    <div class="contenidos">
+        <h2>Diferencias entre discos duros de servidores y discos duros normales</h2>
+        
+        <h3>1. Finalidad y uso</h3>
+        <ul>
+            <li><strong>HD de Desktop:</strong> Están pensados para su uso en computadoras personales o de oficina. Ofrecen un equilibrio entre capacidad y rendimiento a un precio accesible, ideales para tareas como navegación en internet, trabajo de oficina, videojuegos y almacenamiento de archivos multimedia.</li>
+            <li><strong>HD de Servidores:</strong> Diseñados para entornos que requieren funcionamiento ininterrumpido (24/7), soportan un alto volumen de operaciones de lectura y escritura. Son más resistentes, confiables y ofrecen un mejor desempeño en cargas de trabajo intensivas, esenciales para servidores de archivos, centros de datos y aplicaciones empresariales.</li>
+        </ul>
+        
+        <h3>2. Rendimiento y fiabilidad</h3>
+        <ul>
+            <li><strong>HD de Desktop:</strong> Están optimizados para ofrecer un buen desempeño a un costo razonable. Sin embargo, no están diseñados para un uso constante las 24 horas del día, lo que los hace más propensos a fallar en entornos de trabajo intensivo.</li>
+            <li><strong>HD de Servidores:</strong> Construidos con componentes de mayor calidad, están preparados para soportar operaciones exigentes sin interrupciones. Tienen una menor tasa de fallos (MTBF – Tiempo Medio Entre Fallos) e incorporan tecnologías avanzadas para minimizar errores y garantizar la integridad de los datos.</li>
+        </ul>
+        
+        <h3>3. Capacidad y velocidad</h3>
+        <ul>
+            <li><strong>HD de Desktop:</strong> Disponibles en diversas capacidades, son adecuados para el uso doméstico y pequeñas oficinas. Su velocidad de lectura y escritura es suficiente para tareas generales, pero pueden no rendir bien en entornos con múltiples procesos de entrada/salida simultáneos.</li>
+            <li><strong>HD de Servidores:</strong> Ofrecen capacidades más altas y velocidades de rotación superiores (por ejemplo, entre 10.000 y 15.000 RPM, frente a los 5.400 - 7.200 RPM de los discos de escritorio). Esto permite un acceso más rápido a los datos y mejor rendimiento en operaciones intensivas.</li>
+        </ul>
+        
+        <h3>4. Coste</h3>
+        <ul>
+            <li><strong>HD de Desktop:</strong> Son más económicos, ya que buscan un equilibrio entre precio y rendimiento. Son una opción adecuada para quienes necesitan almacenamiento sin incurrir en costos elevados.</li>
+            <li><strong>HD de Servidores:</strong> Su precio es mayor debido a su construcción más robusta, mayor fiabilidad y mejor desempeño. La inversión extra está justificada para empresas que requieren almacenamiento de alta disponibilidad y seguridad.</li>
+        </ul>
+        
+        <h3>5. Tecnologías de almacenamiento</h3>
+        <ul>
+            <li><strong>HD de Desktop:</strong> Mayormente usan interfaces SATA, que ofrecen buen rendimiento y relación calidad-precio para el usuario promedio.</li>
+            <li><strong>HD de Servidores:</strong> Suelen emplear interfaces SAS, que proporcionan mayor velocidad, confiabilidad y permiten conectar varios dispositivos en cadena, características clave en entornos empresariales.</li>
+        </ul>
+    </div>
+    
+    <div class="contenidos" style="margin-top: 20px;">
+        <h3>1. Función principal</h3>
+        <p>Los discos de servidores almacenan datos y están diseñados para manejar tareas pesadas, como:</p>
+        <ul>
+            <li>Almacenar páginas web, correos electrónicos o bases de datos.</li>
+            <li>Procesar miles de solicitudes simultáneas.</li>
+            <li>Operar las 24 horas del día, los 7 días de la semana.</li>
+        </ul>
+        
+        <h3>2. Tipos de discos duros de servidores</h3>
+        <h4>HDD para servidores</h4>
+        <ul>
+            <li>Velocidades de rotación de hasta 15,000 RPM.</li>
+            <li>Diseñados para cargas de trabajo intensas y operación continua.</li>
+        </ul>
+        <h4>SSD para servidores</h4>
+        <ul>
+            <li>Más rápidos que los SSD normales.</li>
+            <li>Utilizan tecnologías como NAND 3D para mayor capacidad y durabilidad.</li>
+        </ul>
+        
+        <h3>3. Capacidad de almacenamiento</h3>
+        <p>Los discos de servidores pueden llegar a almacenar hasta 20 TB o más, a diferencia de los discos normales que suelen ser de 500 GB a 4 TB.</p>
+        
+        <h3>4. Velocidad</h3>
+        <ul>
+            <li>Los HDD de servidores alcanzan hasta 15,000 RPM.</li>
+            <li>Los SSD de servidores tienen una velocidad de lectura/escritura superior.</li>
+        </ul>
+        
+        <h3>5. Confiabilidad</h3>
+        <ul>
+            <li>Mayor MTBF (Tiempo Medio Entre Fallos), superando 1 millón de horas.</li>
+            <li>Protección contra errores y resistencia al calor y vibraciones.</li>
+        </ul>
+        
+        <h3>6. Configuraciones especiales</h3>
+        <p>Los discos en servidores suelen trabajar en arreglos RAID para mejorar rendimiento, seguridad y capacidad.</p>
+        
+        <h3>7. Uso en diferentes tipos de servidores</h3>
+        <ul>
+            <li>Servidores web</li>
+            <li>Servidores de bases de datos</li>
+            <li>Servidores de correo</li>
+            <li>Almacenamiento en la nube</li>
+        </ul>
+        
+        <h3>8. Características adicionales</h3>
+        <p>Muchos discos cuentan con <strong>Hot-swap</strong>, permitiendo ser reemplazados sin apagar el servidor.</p>
+    </div>
+</body>
+</html>
