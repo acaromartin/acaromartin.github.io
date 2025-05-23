@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuaderno de Bitácora - Prácticas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0fdf4;
+      margin: 0;
+      padding: 2rem;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2e7d32;
+      font-size: 1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .dia {
+      margin: 1rem 0;
+      border: 2px solid #81c784;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .titulo-dia {
+      background-color: #66bb6a;
+      color: white;
+      padding: 1rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    .contenido-dia {
+      display: none;
+      background: #e8f5e9;
+      padding: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #a5d6a7;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    td.descripcion {
+      height: 50px;
+      background-color: #ffffff;
+    }
+    .evidencias {
+      margin-top: 3rem;
+    }
+    .evidencias h2 {
+      text-align: center;
+      color: #1b5e20;
+      margin-bottom: 1rem;
+    }
+    .evidencia-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .evidencia-item {
+      width: calc(50% - 1rem);
+      background: #fff;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    .evidencia-item img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+    @media (max-width: 600px) {
+      .evidencia-item {
+        width: 100%;
+      }
+    }
+
+  h1 {
+  text-align: center;
+  color: #1b5e20;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+  </style>
+</head>
+<body>
+  <h1>Cuaderno de Bitácora</h1>
+  <div class="intro">
+    En este cuaderno de bitácora documentamos nuestras actividades del proyecto de clase: crear un juego que funcione en red local usando Debian, guardar datos en una base de datos, y desarrollar una página funcional que actúe como registro diario.
+  <div class="evidencia-grid">
+ <div class="evidencia-item"><p>Nuestro juego "Widelands"</p><img src="Imagenes/WIDELANDS.jpeg" alt="Evidencia 1"></div>
+
+  </div>
+  </div>
+
+  <!-- Miércoles 21 -->
+  <div class="dia">
+    <div class="titulo-dia" onclick="toggle('miercoles')">Miércoles 21</div>
+    <div class="contenido-dia" id="miercoles">
+      <table>
+        <tr><th>Hora</th><th>Actividad</th></tr>
+        <tr>
+          <td>08:30-09:25</td>
+          <td class="descripcion"><b>Todos:</b> Escuchamos las instrucciones del profesor sobre el proyecto y cómo íbamos a hacerlo.</td>
+        </tr>
+        <tr>
+          <td>09:25-10:20</td>
+          <td class="descripcion">
+            <b>Álvaro:</b> Instaló Debian Server e instaló los juegos Widelands y OpenTTD.<br>
+            <b>Héctor:</b> Trabajó junto a Álvaro en la instalación y programación en Debian.<br>
+            <b>Raúl:</b> Empezó con la creación del cuaderno de bitácora y el diseño del mismo.<br>
+            <b>Oliver:</b> Investigó sobre SQLite3 y descargó el mismo.
+          </td>
+        </tr>
+        <tr>
+          <td>10:20-11:15</td>
+          <td class="descripcion">
+            <b>Todos:</b> Instalación y configuración de Debian con entorno LXDE. Prueba del juego Widelands. Búsqueda del lugar donde se almacenan las partidas. Se detecta un problema: la base de datos del juego está encriptada.<br>
+            <b>Oliver:</b> Investigación sobre cómo introducir datos en la base de datos SQLite. <br>
+            <b>Álvaro:</b> Probó el juego OpenTTD, que fue descartado.<br>
+            <b>Raúl:</b> Anotó y documentó las tareas.
+          </td>
+        </tr>
+        <tr>
+          <td>11:45-12:40</td>
+          <td class="descripcion"><b>Oliver:</b> Rellenó un documento con datos técnicos de los juegos, requisitos, y sistema operativo.</td>
+        </tr>
+        <tr>
+          <td>12:40-13:35</td>
+          <td class="descripcion"><b>Todos:</b> Probamos en conjunto el juego para ver si funcionaba en red local.</td>
+        </tr>
+        <tr>
+          <td>13:35-14:30</td>
+          <td class="descripcion">
+            <b>Todos:</b> Buscamos la ruta de guardado de las partidas de Widelands y descubrimos que la base de datos está encriptada y no se puede usar.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Jueves 22 -->
+  <div class="dia">
+    <div class="titulo-dia" onclick="toggle('jueves')">Jueves 22</div>
+    <div class="contenido-dia" id="jueves">
+      <table>
+        <tr><th>Hora</th><th>Actividad</th></tr>
+        <tr>
+          <td>08:30-09:25</td>
+          <td class="descripcion">
+            <b>Raúl:</b> Creó el clan del juego.<br>
+            <b>Héctor:</b> Se descargó y probó el juego NAEV, pero se descartó porque solo era de un jugador. También probó instalar el Juego OpenRA pero fracasó. 
+          </td>
+        </tr>
+        <tr>
+          <td>09:25-10:20</td>
+          <td class="descripcion">
+            <b>Raúl:</b> Anotó el cuaderno de bitácora del día y terminó el día anterior.<br>
+            <b>Oliver:</b> Intentó instalar HedgeWars pero no funcionó.
+          </td>
+        </tr>
+        <tr>
+          <td>10:20-11:15</td>
+          <td class="descripcion">
+            <b>Álvaro y Héctor:</b> Instalaron el juego FreeCiv. Se dieron cuenta de que la base de datos estaba comprimida y al intentar descomprimirla se volvía a comprimir.<br>
+            <b>Oliver:</b> Instaló el juego FreeOrion pero fue descartado por ser muy complicado.
+          </td>
+        </tr>
+        <tr>
+          <td>11:45-12:40</td>
+          <td class="descripcion"><b>Todos:</b> Pruebas generales y análisis de alternativas.</td>
+        </tr>
+        <tr>
+          <td>12:40-13:35</td>
+          <td class="descripcion"><b>Álvaro:</b> Prueba del juego Minetest, pero se detectan problemas de rendimiento y funcionamiento. Se descarta.</td>
+        </tr>
+        <tr>
+          <td>13:35-14:30</td>
+          <td class="descripcion"><b>Todos:</b> Prueba del juego Widelands en modo multijugador LAN para comprobar la funcionalidad en red local.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Viernes 23 -->
+  <div class="dia">
+    <div class="titulo-dia" onclick="toggle('viernes')">Viernes 23</div>
+    <div class="contenido-dia" id="viernes">
+      <table>
+        <tr><th>Hora</th><th>Actividad</th></tr>
+        <tr>
+          <td>08:30-09:25</td>
+          <td class="descripcion">
+            <b>Raúl:</b> Sigue rellenando y diseñando el cuaderno de bitácora.<br>
+            <b>Héctor y Álvaro:</b> Han conseguido crear la base de datos en SQLite y han instalado el navegador de bases de datos para poder verlas gráficamente.<br>
+            <b>Oliver:</b> Ha estado trabajando también con la base de datos.
+          </td>
+        </tr>
+        <tr>
+          <td>09:25-10:30</td>
+          <td class="descripcion"><b>Todos:</b> Seguimos jugando para ver que todo vaya bien.</td>
+        </tr>
+        <tr>
+          <td>10:30-11:15</td>
+          <td class="descripcion"><b>Raúl:</b> Terminar de rematar la página añadiendo las imagenes de evidencias.</td>
+        </tr>
+        <tr>
+          <td>11:45-12:40</td>
+          <td class="descripcion"></td>
+        </tr>
+        <tr>
+          <td>13:35-14:30</td>
+          <td class="descripcion"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Evidencias -->
+  <div class="evidencias">
+    <h2>Evidencias del Proyecto</h2>
+    <div class="evidencia-grid">
+      <div class="evidencia-item"><p>Prueba de Naev</p><img src="Imagenes/1.png" alt="Evidencia 1"></div>
+      <div class="evidencia-item"><p>Prueba Freeciv</p><img src="Imagenes/2.png" alt="Evidencia 2"></div>
+      <div class="evidencia-item"><p>Problemas con Freeciv</p><img src="Imagenes/3.png" alt="Evidencia 3"></div>
+      <div class="evidencia-item"><p>Instalación Minetest</p><img src="Imagenes/4.png" alt="Evidencia 4"></div>
+      <div class="evidencia-item"><p>Ubicación de partidas de Widelands</p><img src="Imagenes/5.png" alt="Evidencia 5"></div>
+      <div class="evidencia-item"><p>Archivo comprimido de partida</p><img src="Imagenes/6.png" alt="Evidencia 6"></div>
+      <div class="evidencia-item"><p>Prueba de FreeOrion</p><img src="Imagenes/7.png" alt="Evidencia 7"></div>
+      <div class="evidencia-item"><p>Creación de la base de datos y tablas</p><img src="Imagenes/8.png" alt="Evidencia 8"></div>
+      <div class="evidencia-item"><p>Inserción de datos en la base de datos</p><img src="Imagenes/9.png" alt="Evidencia 9"></div>
+      <div class="evidencia-item"><p>Instalación de SQLite Browser</p><img src="Imagenes/10.png" alt="Evidencia 10"></div>
+      <div class="evidencia-item"><p>Muestra de la base de datos en entorno gráfico</p><img src="Imagenes/11.png" alt="Evidencia 11"></div>
+      <div class="evidencia-item"><p>Hoja de datos de la base de datos</p><img src="Imagenes/12.png" alt="Evidencia 12"></div>
+      <div class="evidencia-item"><p>Hoja de datos de la base de datos</p><img src="Imagenes/13.png" alt="Evidencia 13"></div>
+      <div class="evidencia-item"><p>Muestra de la partida comprimida y sin comprimir</p><img src="Imagenes/14.png" alt="Evidencia 14"></div>
+      <div class="evidencia-item"><p>Contenido de la partida sin comprimir</p><img src="Imagenes/15.png" alt="Evidencia 15"></div>
+      <div class="evidencia-item"><p>Archivo de la partida</p><img src="Imagenes/16.png" alt="Evidencia 16"></div>
+      <div class="evidencia-item"><p>Archivo de la partida</p><img src="Imagenes/17.png" alt="Evidencia 17"></div>
+      <div class="evidencia-item"><p>Error al jugar partida sin comprimir</p><img src="Imagenes/19.png" alt="Evidencia 19"></div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(id) {
+      const el = document.getElementById(id);
+      el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
